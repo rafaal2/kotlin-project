@@ -10,39 +10,36 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="149dp"
-        android:layout_height="24dp"
-        android:text="agr no mobile"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:id="@+id/textView2"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="poraaa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edietexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="133dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
-
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="237dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="226dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginBottom="33dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="aperte"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintVertical_bias="0.25" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_aperte"
         style="@style/Widget.Material3.Button.TonalButton"
-        android:layout_width="119dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="470dp"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
         android:background="#D81B60"
         android:backgroundTint="#D81B60"
         android:clickable="true"
@@ -56,8 +53,10 @@
         app:iconTint="#FDD835"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText"
+        app:layout_constraintTop_toBottomOf="@+id/edietexto"
+        app:layout_constraintVertical_bias="0.141"
         app:rippleColor="#FDD835"
         app:strokeColor="#FDD835" />
 
