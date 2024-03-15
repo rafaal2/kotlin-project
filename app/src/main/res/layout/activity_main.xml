@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#79FFEB3B"
+    android:backgroundTint="#FDD835"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="149dp"
+        android:layout_height="24dp"
+        android:text="agr no mobile"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="237dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="226dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="33dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="aperte"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.Material3.Button.TonalButton"
+        android:layout_width="119dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="470dp"
+        android:background="#D81B60"
+        android:backgroundTint="#D81B60"
+        android:clickable="true"
+        android:drawableTint="#FDD835"
+        android:foregroundTint="#FDD835"
+        android:shadowColor="#FDD835"
+        android:text="aperte"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        android:textColorLink="#43A047"
+        app:iconTint="#FDD835"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText"
+        app:rippleColor="#FDD835"
+        app:strokeColor="#FDD835" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
