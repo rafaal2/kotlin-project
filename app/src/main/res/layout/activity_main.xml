@@ -13,7 +13,7 @@
         android:id="@+id/button_aperte"
         style="@style/Widget.Material3.Button.TonalButton"
         android:layout_width="237dp"
-        android:layout_height="81dp"
+        android:layout_height="51dp"
         android:background="#D81B60"
         android:backgroundTint="#D81B60"
         android:clickable="true"
@@ -44,19 +44,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.43" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText_celsius"
-        android:layout_width="227dp"
-        android:layout_height="45dp"
+        android:id="@+id/editText_nome"
+        android:layout_width="247dp"
+        android:layout_height="49dp"
         android:ems="10"
-        android:hint="Insira a temperatura em C"
-        android:inputType="number|numberDecimal"
+        android:hint="digite seu nome"
+        android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/button_aperte"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_sobrenome"
+        android:layout_width="238dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:hint="digite seu sobrenome"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.211" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

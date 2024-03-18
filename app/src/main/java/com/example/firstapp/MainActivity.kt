@@ -1,6 +1,7 @@
 package com.example.firstapp
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.firstapp.databinding.ActivityMainBinding
 
@@ -12,12 +13,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.buttonAperte.setOnClickListener {
-            if(!binding.editTextCelsius.text.toString().isEmpty()) {
-                val celsius = binding.editTextCelsius.text.toString().toDouble()
-                val fahrenheit = celsius * 1.8 + 32
-                binding.textResult.text = "$fahrenheit F"
+            val nome = binding.editTextNome.text.toString().trim()
+            val sobrenome = binding.editTextSobrenome.text.toString().trim()
+
+            if(nome.isEmpty() || sobrenome.isEmpty()) {
+                Toast.makeText(applicationContext, "insira nome e sobrenome", Toast.LENGTH_SHORT).show()
             }else{
-                binding.textResult.text = "temperatura invalida"
+                binding.textResult.text = "Olá $nome $sobrenome"
             }
         }
     }
