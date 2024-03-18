@@ -12,8 +12,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.buttonAperte.setOnClickListener {
-            val nome : String = binding.edietexto.text.toString()
-            binding.textView2.text = "oi ${nome}"
+            val real = binding.editTextReal.text.toString().toDouble()
+            val dolar = real * 0.2
+            binding.textResult.text = dolar.toString()
         }
     }
 }

@@ -9,37 +9,11 @@
     android:backgroundTint="#FDD835"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="20dp"
-        android:text="poraaa"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/edietexto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="133dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
-
     <Button
         android:id="@+id/button_aperte"
         style="@style/Widget.Material3.Button.TonalButton"
-        android:layout_width="0dp"
-        android:layout_height="57dp"
+        android:layout_width="237dp"
+        android:layout_height="81dp"
         android:background="#D81B60"
         android:backgroundTint="#D81B60"
         android:clickable="true"
@@ -51,13 +25,37 @@
         android:textColor="@color/white"
         android:textColorLink="#43A047"
         app:iconTint="#FDD835"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/text_result"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edietexto"
-        app:layout_constraintVertical_bias="0.141"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.703"
         app:rippleColor="#FDD835"
         app:strokeColor="#FDD835" />
+
+    <TextView
+        android:id="@+id/text_result"
+        android:layout_width="116dp"
+        android:layout_height="53dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.43" />
+
+    <EditText
+        android:id="@+id/editText_real"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="insira um valor em real"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/button_aperte"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
