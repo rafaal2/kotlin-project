@@ -12,14 +12,33 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.buttonAperte.setOnClickListener {
-            val nome = binding.editTextNome.text.toString().trim()
-            val sobrenome = binding.editTextSobrenome.text.toString().trim()
 
-            if(nome.isEmpty() || sobrenome.isEmpty()) {
-                Toast.makeText(applicationContext, "insira nome e sobrenome", Toast.LENGTH_SHORT).show()
+
+        binding.buttonDolar.setOnClickListener {
+            val real = binding.editTextReal.text.toString().trim()
+            if(real.isEmpty()) {
+                Toast.makeText(applicationContext, "insira um valor", Toast.LENGTH_SHORT).show()
             }else{
-                binding.textResult.text = "Olá $nome $sobrenome"
+                val resultado = real.toDouble() * 0.2
+                binding.textResult.text = "${resultado}"
+            }
+        }
+        binding.buttonEuro.setOnClickListener {
+            val real = binding.editTextReal.text.toString().trim()
+            if(real.isEmpty()) {
+                Toast.makeText(applicationContext, "insira um valor", Toast.LENGTH_SHORT).show()
+            }else{
+                val resultado = real.toDouble() * 0.18
+                binding.textResult.text = "${resultado}"
+            }
+        }
+        binding.buttonYuan.setOnClickListener {
+            val real = binding.editTextReal.text.toString().trim()
+            if(real.isEmpty()) {
+                Toast.makeText(applicationContext, "insira um valor", Toast.LENGTH_SHORT).show()
+            }else{
+                val resultado = real.toDouble() * 1.44
+                binding.textResult.text = "${resultado}"
             }
         }
     }
