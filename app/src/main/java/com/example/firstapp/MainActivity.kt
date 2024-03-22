@@ -1,5 +1,6 @@
 package com.example.firstapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -19,6 +20,8 @@ class MainActivity : AppCompatActivity() {
             val senha = binding.editTextSenha.text.toString().trim()
             if(username.equals("user") && senha.equals("senha")) {
                 Toast.makeText(applicationContext, "senha correta", Toast.LENGTH_SHORT).show()
+                val i = Intent(this, ProfileActivity::class.java)
+                startActivity(i)
             }else{
                 Toast.makeText(applicationContext, "acesso negado", Toast.LENGTH_SHORT).show()
             }
