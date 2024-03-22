@@ -74,7 +74,7 @@
             android:background="#4F90C8"
             android:ems="10"
             android:hint="insira a senha"
-            android:inputType="text"
+            android:inputType="textPassword"
             android:layout_margin="10dp"
             android:gravity="center"
             android:fontFamily="sans-serif-black"
