@@ -14,32 +14,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        binding.buttonDolar.setOnClickListener {
-            val real = binding.editTextReal.text.toString().trim()
-            if(real.isEmpty()) {
-                Toast.makeText(applicationContext, "insira um valor", Toast.LENGTH_SHORT).show()
+        binding.buttonConfirmar.setOnClickListener {
+            val username = binding.editTextuser.text.toString().trim()
+            val senha = binding.editTextSenha.text.toString().trim()
+            if(username.equals("user") && senha.equals("senha")) {
+                Toast.makeText(applicationContext, "senha correta", Toast.LENGTH_SHORT).show()
             }else{
-                val resultado = real.toDouble() * 0.2
-                binding.textResult.text = "${resultado}"
+                Toast.makeText(applicationContext, "acesso negado", Toast.LENGTH_SHORT).show()
             }
-        }
-        binding.buttonEuro.setOnClickListener {
-            val real = binding.editTextReal.text.toString().trim()
-            if(real.isEmpty()) {
-                Toast.makeText(applicationContext, "insira um valor", Toast.LENGTH_SHORT).show()
-            }else{
-                val resultado = real.toDouble() * 0.18
-                binding.textResult.text = "${resultado}"
-            }
-        }
-        binding.buttonYuan.setOnClickListener {
-            val real = binding.editTextReal.text.toString().trim()
-            if(real.isEmpty()) {
-                Toast.makeText(applicationContext, "insira um valor", Toast.LENGTH_SHORT).show()
-            }else{
-                val resultado = real.toDouble() * 1.44
-                binding.textResult.text = "${resultado}"
-            }
+            binding.editTextuser.setText("")
+            binding.editTextSenha.setText("")
         }
     }
 }
