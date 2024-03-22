@@ -14,8 +14,15 @@
     <TextView
         android:id="@+id/texto1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="370dp"
         android:gravity="center"
-        android:text="parabens"
+        android:text="Bem vindo"
         android:textSize="40dp"></TextView>
-    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewrecieve"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="40sp" />
+</LinearLayout>

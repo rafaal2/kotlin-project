@@ -10,9 +10,35 @@
     android:backgroundTint="#FDD835"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:gravity="center"
+
     >
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity=""
+        android:orientation="horizontal"
+       >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="nome:" />
+
+        <EditText
+            android:id="@+id/editTextnome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#BC802BE1"
+            android:ems="10"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:hint="insira o seu nome"
+            android:inputType="text"
+            android:padding="20px" />
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
@@ -21,7 +47,8 @@
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:textSize="40sp"
-        android:layout_marginBottom="50dp"/>
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="60dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -47,7 +74,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="#4F90C8"
+            android:background="#BC802BE1"
             android:ems="10"
             android:fontFamily="sans-serif-black"
             android:gravity="center"
@@ -71,7 +98,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="20px"
-            android:background="#4F90C8"
+            android:background="#BC802BE1"
             android:ems="10"
             android:hint="insira a senha"
             android:inputType="textPassword"
