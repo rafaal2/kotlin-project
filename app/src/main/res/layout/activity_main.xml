@@ -20,24 +20,6 @@
         android:orientation="horizontal"
        >
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-black"
-            android:text="nome:" />
-
-        <EditText
-            android:id="@+id/editTextnome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="#BC802BE1"
-            android:ems="10"
-            android:fontFamily="sans-serif-black"
-            android:gravity="center"
-            android:hint="insira o seu nome"
-            android:inputType="text"
-            android:padding="20px" />
     </LinearLayout>
 
     <TextView
@@ -114,11 +96,24 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:clickable="true"
-        android:text="aperte"
+        android:text="login"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/black"
         android:fontFamily="sans-serif-black"
         android:layout_margin="30dp"
         />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/Widget.Material3.Button.TonalButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:clickable="true"
+        android:text="criar conta"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black"
+        android:layout_margin="30dp" />
 
 </LinearLayout>

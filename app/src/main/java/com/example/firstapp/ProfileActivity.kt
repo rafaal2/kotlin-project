@@ -12,10 +12,5 @@ class ProfileActivity : AppCompatActivity() {
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val i = intent
-        val nome = i.extras?.getString("nome")
 
-        binding.textViewrecieve.text = nome
-
-        }
-}
+    }}
