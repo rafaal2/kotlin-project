@@ -13,17 +13,19 @@
         android:theme="@style/Theme.FirstApp"
         tools:targetApi="31">
         <activity
-            android:name=".RegisterActivity"
+            android:name=".RegisterUserActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Dialog"/>
+        <activity
+            android:name=".ReadProductActivity"
             android:exported="false" />
         <activity
-            android:name=".ReadActivity"
+            android:name=".EditProductActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".AddActivity"
-            android:exported="false" />
+            android:name=".AddProductActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Dialog"/>
         <activity
             android:name=".InitialActivity"
             android:exported="true">

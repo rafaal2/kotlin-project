@@ -29,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
             binding.editTextSenha.setText("")
         }
         binding.buttonCriarConta.setOnClickListener {
-            val a = Intent(this, RegisterActivity::class.java)
+            val a = Intent(this, RegisterUserActivity::class.java)
             startActivity(a)
         }
     }

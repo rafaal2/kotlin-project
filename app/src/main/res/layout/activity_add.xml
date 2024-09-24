@@ -8,7 +8,7 @@
     android:background="#79FFEB3B"
     android:backgroundTint="#FDD835"
     android:orientation="vertical"
-    tools:context=".AddActivity"
+    tools:context=".AddProductActivity"
 
     >
 
