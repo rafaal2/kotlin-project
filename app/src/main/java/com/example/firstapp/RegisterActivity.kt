@@ -2,18 +2,20 @@ package com.example.firstapp
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
+import com.example.firstapp.databinding.ActivityRegisterBinding
 
-class InitialActivity : AppCompatActivity() {
+class RegisterActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityRegisterBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_initial)
-        Handler(Looper.getMainLooper()).postDelayed({
+        binding = ActivityRegisterBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.buttonCancelar.setOnClickListener {
             val i = Intent(this, LoginActivity::class.java)
             startActivity(i)
-            finish()
-        }, 3000)
+
         }
-    }
+}}

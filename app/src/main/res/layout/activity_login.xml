@@ -9,7 +9,7 @@
     android:background="#79FFEB3B"
     android:backgroundTint="#FDD835"
     android:orientation="vertical"
-    tools:context=".MainActivity"
+    tools:context=".LoginActivity"
 
     >
 
@@ -90,7 +90,7 @@
             />
     </LinearLayout>
     <Button
-        android:id="@+id/button_confirmar"
+        android:id="@+id/buttonConfirmar"
         style="@style/Widget.Material3.Button.TonalButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -104,7 +104,7 @@
         />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonCriarConta"
         style="@style/Widget.Material3.Button.TonalButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

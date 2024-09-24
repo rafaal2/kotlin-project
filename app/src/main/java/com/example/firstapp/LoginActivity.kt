@@ -4,14 +4,14 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.firstapp.databinding.ActivityMainBinding
+import com.example.firstapp.databinding.ActivityLoginBinding
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
@@ -27,6 +27,10 @@ class MainActivity : AppCompatActivity() {
             }
             binding.editTextuser.setText("")
             binding.editTextSenha.setText("")
+        }
+        binding.buttonCriarConta.setOnClickListener {
+            val a = Intent(this, RegisterActivity::class.java)
+            startActivity(a)
         }
     }
 }

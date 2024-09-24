@@ -14,7 +14,7 @@
     <TextView
         android:id="@+id/texto1"
         android:layout_width="match_parent"
-        android:layout_height="370dp"
+        android:layout_height="210dp"
         android:gravity="center"
         android:text="Bem vindo"
         android:textSize="40dp"></TextView>
@@ -27,8 +27,14 @@
         android:textSize="40sp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonCadastro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="cadastrar" />
+
+    <Button
+        android:id="@+id/buttonLista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lista" />
 </LinearLayout>
