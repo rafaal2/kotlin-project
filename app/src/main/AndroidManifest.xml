@@ -17,13 +17,13 @@
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Dialog"/>
         <activity
-            android:name=".ReadProductActivity"
+            android:name=".ReadProdutoActivity"
             android:exported="false" />
         <activity
-            android:name=".EditProductActivity"
+            android:name=".EditProdutoActivity"
             android:exported="false" />
         <activity
-            android:name=".AddProductActivity"
+            android:name=".AddProdutoActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Dialog"/>
         <activity

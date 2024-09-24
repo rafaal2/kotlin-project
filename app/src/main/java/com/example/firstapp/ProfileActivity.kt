@@ -14,11 +14,11 @@ class ProfileActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.buttonCadastro.setOnClickListener {
-            val i = Intent(this, AddProductActivity::class.java)
+            val i = Intent(this, AddProdutoActivity::class.java)
             startActivity(i)
         }
         binding.buttonLista.setOnClickListener {
-            val a= Intent(this, ReadProductActivity::class.java)
+            val a= Intent(this, ReadProdutoActivity::class.java)
             startActivity(a)
         }
 

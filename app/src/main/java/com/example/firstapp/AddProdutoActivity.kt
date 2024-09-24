@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.firstapp.databinding.ActivityAddBinding
 
-class AddProductActivity : AppCompatActivity() {
+class AddProdutoActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAddBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
