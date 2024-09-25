@@ -8,8 +8,8 @@
     android:layout_height="match_parent"
     tools:context=".DashboardActivity"
     android:orientation="vertical"
-    android:background="#79FFEB3B"
-    android:backgroundTint="#FDD835">
+    android:background="#D3D3D3"
+    android:backgroundTint="#D3D3D3">
 
     <TextView
         android:id="@+id/texto1"
@@ -30,11 +30,16 @@
         android:id="@+id/buttonCadastro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="cadastrar" />
+        android:text="cadastrar novo produto"
+        android:layout_margin="15dp"
+        android:background="@drawable/main_button"/>
 
     <Button
+        android:layout_marginTop="40dp"
+        android:layout_margin="15dp"
         android:id="@+id/buttonLista"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lista" />
+        android:text="Lista de produtos"
+        android:background="@drawable/main_button"/>
 </LinearLayout>

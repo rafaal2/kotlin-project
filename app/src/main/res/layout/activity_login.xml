@@ -1,119 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#79FFEB3B"
-    android:backgroundTint="#FDD835"
+    android:background="#D3D3D3"
+    android:backgroundTint="#D3D3D3"
     android:orientation="vertical"
     tools:context=".LoginActivity"
-
     >
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity=""
-        android:orientation="horizontal"
-       >
-
-    </LinearLayout>
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="seja bem vindo ao app"
-        android:fontFamily="sans-serif-black"
-        android:gravity="center"
-        android:textSize="40sp"
+        android:layout_marginTop="60dp"
         android:layout_marginBottom="50dp"
-        android:layout_marginTop="60dp"/>
+        android:gravity="center"
+        android:text="seja bem vindo ao app"
+        android:textSize="40sp" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="preencha com user e senha"
-        android:fontFamily="sans-serif-black"
+        android:layout_marginBottom="25dp"
         android:gravity="center"
-        android:layout_marginBottom="50dp"/>
+        android:text="preencha com user e senha" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-black"
-            android:text="user:" />
+            android:layout_margin="15dp"
+            android:text="Usuario"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="4dp"/>
 
         <EditText
             android:id="@+id/editTextuser"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="#BC802BE1"
-            android:ems="10"
-            android:fontFamily="sans-serif-black"
-            android:gravity="center"
-            android:hint="insira o usuario"
-            android:inputType="text"
-            android:padding="20px" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        >
+            android:layout_marginHorizontal="15dp"
+            android:background="@drawable/edittext_background"
+            android:hint="Insira o usuario"
+            android:padding="12dp" />
+
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="senha:"
-            android:fontFamily="sans-serif-black"/>
+            android:layout_margin="15dp"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="4dp"
+            android:text="Senha"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
         <EditText
             android:id="@+id/editText_senha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20px"
-            android:background="#BC802BE1"
-            android:ems="10"
-            android:hint="insira a senha"
-            android:inputType="textPassword"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:fontFamily="sans-serif-black"
-            />
-    </LinearLayout>
+            android:background="@drawable/edittext_background"
+            android:hint="Insira a senha"
+            android:layout_marginHorizontal="15dp"
+            android:padding="12dp" />
+
+
     <Button
         android:id="@+id/buttonConfirmar"
-        style="@style/Widget.Material3.Button.TonalButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:layout_margin="15dp"
+        android:background="@drawable/main_button"
         android:clickable="true"
-        android:text="login"
+        android:text="Login"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@color/black"
-        android:fontFamily="sans-serif-black"
-        android:layout_margin="30dp"
-        />
+        android:textColor="@color/black" />
 
     <Button
         android:id="@+id/buttonCriarConta"
-        style="@style/Widget.Material3.Button.TonalButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:layout_margin="15dp"
+        android:background="@drawable/main_button"
         android:clickable="true"
         android:text="criar conta"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@color/black"
-        android:fontFamily="sans-serif-black"
-        android:layout_margin="30dp" />
+        android:textColor="@color/black" />
 
 </LinearLayout>

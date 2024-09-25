@@ -2,12 +2,14 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/popup_background"
+    android:layout_height="match_parent"
+    tools:context=".AddProdutoActivity"
+    android:background="#D3D3D3"
+    android:backgroundTint="#D3D3D3"
     android:padding="24dp"
-    android:orientation="vertical"
-    android:gravity="center_horizontal">
+    android:orientation="vertical">
 
     <Button
         android:id="@+id/buttonCancelar"
@@ -16,7 +18,8 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="15dp"
         android:text="Cancelar"
-        android:layout_gravity="end" />
+        android:layout_gravity="end"
+        android:background="@drawable/main_button"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -90,5 +93,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:text="Salvar"
-        android:layout_gravity="center" />
+        android:fontFamily="@font/poppins_medium"
+        android:background="@drawable/main_button"
+        android:layout_gravity="center"/>
 </LinearLayout>
