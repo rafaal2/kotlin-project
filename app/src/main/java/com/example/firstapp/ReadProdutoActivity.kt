@@ -17,18 +17,21 @@ import com.example.firstapp.model.Produto
 class ReadProdutoActivity : AppCompatActivity() {
     private lateinit var binding: ActivityReadBinding
     private lateinit var produtoDAO: ProdutoDAO
+    private var userId: Int = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityReadBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        userId = intent.getIntExtra("user_id", -1)
+
         val db = DB(this)
         produtoDAO = db.getProdutoDAO()
 
-        val allProducts = produtoDAO.produtoListSelectAll()
+        val userProducts = produtoDAO.produtoListByUser(userId)
 
-        val adapter = object : ArrayAdapter<Produto>(this, 0, allProducts) {
+        val adapter = object : ArrayAdapter<Produto>(this, 0, userProducts) {
             override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
                 val view = convertView ?: LayoutInflater.from(context).inflate(R.layout.list_item_product, parent, false)
 
@@ -42,7 +45,6 @@ class ReadProdutoActivity : AppCompatActivity() {
 
                 val textViewPrice = view.findViewById<TextView>(R.id.textViewPrice)
                 textViewPrice.text = "Preço: R$ ${product?.preco?.toString() ?: "0.00"}"
-
 
                 val buttonEdit = view.findViewById<Button>(R.id.buttonEdit)
                 buttonEdit.setOnClickListener {

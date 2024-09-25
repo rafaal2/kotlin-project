@@ -8,7 +8,8 @@ class DB(context : Context) : SQLiteOpenHelper(context, "baseteste", null, 1) {
 
     val sql = arrayOf(
         "CREATE TABLE user (user_id INTEGER PRIMARY KEY AUTOINCREMENT, username VARCHAR, senha VARCHAR)",
-        "CREATE TABLE produto (produto_id INTEGER PRIMARY KEY AUTOINCREMENT, nome VARCHAR, quantidade INTEGER, preco DOUBLE)"
+        "CREATE TABLE produto (produto_id INTEGER PRIMARY KEY AUTOINCREMENT, nome VARCHAR, quantidade INTEGER, preco DOUBLE," +
+                " user_id INTEGER, FOREIGN KEY(user_id) references user(user_id))"
     )
     override fun onCreate(db: SQLiteDatabase) {
         sql.forEach {

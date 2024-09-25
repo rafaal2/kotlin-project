@@ -11,6 +11,7 @@ import com.example.firstapp.model.Produto
 class AddProdutoActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAddBinding
     private lateinit var produtoDAO: ProdutoDAO
+    private var userId: Int = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +20,8 @@ class AddProdutoActivity : AppCompatActivity() {
 
         val db = DB(this)
         produtoDAO = db.getProdutoDAO()
+
+        userId = intent.getIntExtra("user_id", -1)
 
         binding.buttonSalvarProduto.setOnClickListener {
             val nome = binding.editTextNome.text.toString().trim()
@@ -38,7 +41,7 @@ class AddProdutoActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            val produto = Produto(0, nome, quantidade, preco)
+            val produto = Produto(0, nome, quantidade, preco, userId)
             val result = produtoDAO.produtoCreate(produto)
 
             if (result != -1L) {
