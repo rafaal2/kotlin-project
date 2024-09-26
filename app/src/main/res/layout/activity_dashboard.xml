@@ -17,14 +17,10 @@
         android:layout_height="210dp"
         android:gravity="center"
         android:text="Bem vindo"
-        android:textSize="40dp"></TextView>
-
-    <TextView
-        android:id="@+id/textViewrecieve"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="40sp" />
+        android:textSize="40dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="75dp"
+        android:layout_marginBottom="75dp"/>
 
     <Button
         android:id="@+id/buttonCadastro"

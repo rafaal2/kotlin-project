@@ -44,5 +44,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Editar"
-        android:background="@drawable/main_button"/>
+        android:background="@drawable/main_button"
+        android:layout_marginTop="16dp"/>
 </LinearLayout>

@@ -17,7 +17,7 @@
         android:layout_marginTop="60dp"
         android:layout_marginBottom="50dp"
         android:gravity="center"
-        android:text="Sistema de cadastro de produtos"
+        android:text="Sistema para cadastro de produtos"
         android:textSize="35sp"
         android:textStyle="bold"
         android:textColor="@android:color/black"/>
@@ -40,6 +40,7 @@
             android:layout_marginHorizontal="15dp"
             android:background="@drawable/edittext_background"
             android:hint="Insira o usuario"
+            android:textColorHint="#A9A9A9"
             android:padding="12dp" />
 
 
@@ -59,9 +60,11 @@
             android:layout_height="wrap_content"
             android:background="@drawable/edittext_background"
             android:hint="Insira a senha"
+            android:textColorHint="#A9A9A9"
             android:inputType="textPassword"
             android:layout_marginHorizontal="15dp"
-            android:padding="12dp" />
+            android:padding="12dp"
+            android:layout_marginBottom="20dp"/>
 
 
     <Button
@@ -82,7 +85,7 @@
         android:layout_margin="15dp"
         android:background="@drawable/main_button"
         android:clickable="true"
-        android:text="criar conta"
+        android:text="Criar conta"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/black" />
 
