@@ -48,15 +48,20 @@ class ReadProdutoActivity : AppCompatActivity() {
 
                 val buttonEdit = view.findViewById<Button>(R.id.buttonEdit)
                 buttonEdit.setOnClickListener {
-                    val i = Intent(context, EditProdutoActivity::class.java)
-                    i.putExtra("produto_id", product?.produto_id)
-                    startActivity(i)
-                }
-
+                        val i = Intent(context, EditProdutoActivity::class.java)
+                        i.putExtra("produto_id", product?.produto_id)
+                        i.putExtra("nome", product?.nome)
+                        i.putExtra("quantidade", product?.quantidade)
+                        i.putExtra("preco", product?.preco)
+                        i.putExtra("user_id", userId)
+                        startActivity(i)
+                        finish()
+                    }
                 return view
             }
         }
-
         binding.listView.adapter = adapter
+
     }
+
 }

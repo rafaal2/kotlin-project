@@ -59,7 +59,6 @@ class ProdutoDAO(private val db: SQLiteDatabase) {
                 val quantidadeIndex = c.getColumnIndex("quantidade")
                 val precoIndex = c.getColumnIndex("preco")
                 val useridIndex = c.getColumnIndex("user_id")
-
                 val produtoid = c.getInt(produtoidIndex)
                 val nome = c.getString(nomeIndex)
                 val quantidade = c.getInt(quantidadeIndex)
