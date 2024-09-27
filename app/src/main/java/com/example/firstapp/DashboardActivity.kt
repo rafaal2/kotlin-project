@@ -1,7 +1,11 @@
 package com.example.firstapp
 
+import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import com.example.firstapp.databinding.ActivityDashboardBinding
 
@@ -27,5 +31,26 @@ class DashboardActivity : AppCompatActivity() {
             intent.putExtra("user_id", userId)
             startActivity(intent)
         }
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                showLogoutDialog()
+            }
+        })
+    }
+
+    private fun showLogoutDialog() {
+        val dialog = Dialog(this)
+        val view: View = LayoutInflater.from(this).inflate(R.layout.dialoglogout_box,null)
+        dialog.setContentView(view)
+        val buttonConfirmar = view.findViewById<View>(R.id.buttonConfirmar)
+        val buttonCancelar = view.findViewById<View>(R.id.buttonCancelar)
+
+        buttonConfirmar.setOnClickListener {
+            finish()
+        }
+        buttonCancelar.setOnClickListener {
+            dialog.dismiss()  // Fecha o diálogo
+        }
+        dialog.show()
     }
 }
