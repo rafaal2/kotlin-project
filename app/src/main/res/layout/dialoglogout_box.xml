@@ -5,12 +5,12 @@
     android:layout_height="wrap_content"
     android:background="#D3D3D3"
     android:backgroundTint="#D3D3D3"
-    app:cardCornerRadius="16dp"
+    app:cardCornerRadius="20dp"
     app:cardElevation="10dp">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="265dp"
+        android:layout_height="159dp"
         android:orientation="vertical"
         android:padding="16dp">
 
@@ -35,19 +35,19 @@
                 android:id="@+id/buttonCancelar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_margin="5dp"
-                android:text="Cancelar"
-                android:background="@drawable/main_button" />
+                android:layout_weight="1"
+                android:background="@drawable/main_button"
+                android:text="Cancelar" />
 
             <Button
                 android:id="@+id/buttonConfirmar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_margin="5dp"
-                android:text="Confirmar"
-                android:background="@drawable/main_button" />
+                android:layout_weight="1"
+                android:background="@drawable/main_button"
+                android:text="Confirmar" />
         </LinearLayout>
 
     </LinearLayout>

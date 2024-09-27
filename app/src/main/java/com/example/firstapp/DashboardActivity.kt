@@ -37,7 +37,6 @@ class DashboardActivity : AppCompatActivity() {
             }
         })
     }
-
     private fun showLogoutDialog() {
         val dialog = Dialog(this)
         val view: View = LayoutInflater.from(this).inflate(R.layout.dialoglogout_box,null)
@@ -49,7 +48,7 @@ class DashboardActivity : AppCompatActivity() {
             finish()
         }
         buttonCancelar.setOnClickListener {
-            dialog.dismiss()  // Fecha o diálogo
+            dialog.dismiss()
         }
         dialog.show()
     }

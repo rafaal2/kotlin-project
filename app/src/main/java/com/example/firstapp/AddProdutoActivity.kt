@@ -23,15 +23,19 @@ class AddProdutoActivity : AppCompatActivity() {
 
         userId = intent.getIntExtra("user_id", -1)
 
+
         binding.buttonSalvarProduto.setOnClickListener {
             val nome = binding.editTextNome.text.toString().trim()
             val quantidadeStr = binding.editTextQuantidade.text.toString().trim()
-            val precoStr = binding.editTextPreco.text.toString().trim()
+            var precoStr = binding.editTextPreco.text.toString().trim()
 
             if (nome.isEmpty() || quantidadeStr.isEmpty() || precoStr.isEmpty()) {
                 Toast.makeText(this, "Preencha todos os campos!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+
+            precoStr = precoStr.replace(",", ".")
+
 
             val quantidade = quantidadeStr.toIntOrNull()
             val preco = precoStr.toDoubleOrNull()

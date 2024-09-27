@@ -1,7 +1,10 @@
 package com.example.firstapp
 
+import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -42,33 +45,22 @@ class EditProdutoActivity : AppCompatActivity() {
         }
 
         binding.buttonExcluirProduto.setOnClickListener {
-            val produtoId = intent.getIntExtra("produto_id", -1)
-
-            if (produtoId != -1) {
-                val result = produtoDAO.produtoDelete(produtoId)
-
-                if (result > 0) {
-                    Toast.makeText(this, "Produto excluído com sucesso!", Toast.LENGTH_SHORT).show()
-                    finish()
-                    val intent = Intent(this, ReadProdutoActivity::class.java)
-                    intent.putExtra("user_id", userId)
-                    startActivity(intent)
-                } else {
-                    Toast.makeText(this, "Erro ao excluir o produto. Tente novamente!", Toast.LENGTH_SHORT).show()
-                }
-            }
+            showdeleteDialog()
         }
 
         binding.buttonEditarProduto.setOnClickListener {
             val produtoId = intent.getIntExtra("produto_id", -1)
             val nome = binding.editTextNovoNome.text.toString().trim()
             val quantidadeStr = binding.editTextNovaQuantidade.text.toString().trim()
-            val precoStr = binding.editTextNovoPreco.text.toString().trim()
+            var precoStr = binding.editTextNovoPreco.text.toString().trim()
 
             if (nome.isEmpty() || quantidadeStr.isEmpty() || precoStr.isEmpty()) {
                 Toast.makeText(this, "Preencha todos os campos!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+
+            precoStr = precoStr.replace(",", ".")
+
 
             val quantidade = quantidadeStr.toIntOrNull()
             val preco = precoStr.toDoubleOrNull()
@@ -87,9 +79,36 @@ class EditProdutoActivity : AppCompatActivity() {
                     val intent = Intent(this, ReadProdutoActivity::class.java)
                     intent.putExtra("user_id", userId)
                     startActivity(intent)
-                } else {
-                    Toast.makeText(this, "Erro ao atualizar o produto. Tente novamente!", Toast.LENGTH_SHORT).show()
                 }
             }
         }
-    }}
+
+    }
+    private fun showdeleteDialog() {
+        val dialog = Dialog(this)
+        val view: View = LayoutInflater.from(this).inflate(R.layout.dialogdelete_box,null)
+        dialog.setContentView(view)
+        val buttonConfirmarC = view.findViewById<View>(R.id.buttonConfirmarC)
+        val buttonCancelarC = view.findViewById<View>(R.id.buttonCancelarC)
+
+        buttonConfirmarC.setOnClickListener {
+            val produtoId = intent.getIntExtra("produto_id", -1)
+
+            if (produtoId != -1) {
+                val result = produtoDAO.produtoDelete(produtoId)
+
+                if (result > 0) {
+                    Toast.makeText(this, "Produto excluído com sucesso!", Toast.LENGTH_SHORT).show()
+                    finish()
+                    val intent = Intent(this, ReadProdutoActivity::class.java)
+                    intent.putExtra("user_id", userId)
+                    startActivity(intent)
+                }
+            }
+        }
+        buttonCancelarC.setOnClickListener {
+            dialog.dismiss()
+        }
+        dialog.show()
+    }
+}

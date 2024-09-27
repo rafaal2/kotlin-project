@@ -59,6 +59,7 @@ class ReadProdutoActivity : AppCompatActivity() {
                     }
                 return view
             }
+
         }
         binding.listView.adapter = adapter
 
