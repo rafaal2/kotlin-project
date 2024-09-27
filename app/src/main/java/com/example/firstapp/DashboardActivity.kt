@@ -41,6 +41,7 @@ class DashboardActivity : AppCompatActivity() {
         val dialog = Dialog(this)
         val view: View = LayoutInflater.from(this).inflate(R.layout.dialoglogout_box,null)
         dialog.setContentView(view)
+        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
         val buttonConfirmar = view.findViewById<View>(R.id.buttonConfirmar)
         val buttonCancelar = view.findViewById<View>(R.id.buttonCancelar)
 

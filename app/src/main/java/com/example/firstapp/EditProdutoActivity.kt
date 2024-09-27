@@ -85,18 +85,18 @@ class EditProdutoActivity : AppCompatActivity() {
 
     }
     private fun showdeleteDialog() {
-        val dialog = Dialog(this)
-        val view: View = LayoutInflater.from(this).inflate(R.layout.dialogdelete_box,null)
+        val dialog = Dialog(this, R.style.CustomDialog)
+        val view: View = LayoutInflater.from(this).inflate(R.layout.dialogdelete_box, null)
         dialog.setContentView(view)
+        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
         val buttonConfirmarC = view.findViewById<View>(R.id.buttonConfirmarC)
         val buttonCancelarC = view.findViewById<View>(R.id.buttonCancelarC)
 
         buttonConfirmarC.setOnClickListener {
             val produtoId = intent.getIntExtra("produto_id", -1)
-
             if (produtoId != -1) {
                 val result = produtoDAO.produtoDelete(produtoId)
-
                 if (result > 0) {
                     Toast.makeText(this, "Produto excluído com sucesso!", Toast.LENGTH_SHORT).show()
                     finish()
@@ -106,6 +106,7 @@ class EditProdutoActivity : AppCompatActivity() {
                 }
             }
         }
+
         buttonCancelarC.setOnClickListener {
             dialog.dismiss()
         }
