@@ -30,6 +30,10 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "Preencha todos os campos!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+            if (senha.length < 8) {
+                Toast.makeText(this, "A senha deve ter no mínimo 8 caracteres!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
 
             val userId = userDAO.getUserIdByLogin(username, senha)
 

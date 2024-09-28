@@ -29,6 +29,11 @@ class RegisterUserActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            if (senha.length < 8) {
+                Toast.makeText(this, "A senha deve ter no mínimo 8 caracteres!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             val user = User(0, username, senha)
             val result = UserDAO.userCreate(user)
 
